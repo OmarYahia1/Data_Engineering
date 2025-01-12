@@ -1,0 +1,62 @@
+Column,Original,Imputed
+emp_title,missing,Manager (mode)
+emp_length,missing,10+ years (mode)
+home_ownership,MORTGAGE,3
+home_ownership,RENT,2
+home_ownership,OWN,4
+home_ownership,NONE,0
+home_ownership,ANY,1
+annual_inc_joint,missing,0.0
+verification_status,Not Verified,0
+verification_status,Source Verified,1
+verification_status,Verified,2
+loan_status,Current,5
+loan_status,Fully Paid,6
+loan_status,Charged Off,1
+loan_status,Late (31-120 days),2
+loan_status,In Grace Period,4
+loan_status,Late (16-30 days),3
+loan_status,Default,0
+int_rate,missing,0.1845 (median)
+grade,16,D
+grade,3,A
+grade,7,B
+grade,5,A
+grade,12,C
+grade,17,D
+grade,4,A
+grade,15,C
+grade,11,C
+grade,24,E
+grade,25,E
+grade,10,B
+grade,6,B
+grade,30,F
+grade,13,C
+grade,9,B
+grade,14,C
+grade,19,D
+grade,8,B
+grade,2,A
+grade,1,A
+grade,20,D
+grade,22,E
+grade,18,D
+grade,21,E
+grade,28,F
+grade,27,F
+grade,32,G
+grade,26,F
+grade,29,F
+grade,35,G
+grade,23,E
+grade,34,G
+grade,31,G
+grade,33,G
+letter_grade,D,3
+letter_grade,A,6
+letter_grade,B,5
+letter_grade,C,4
+letter_grade,E,2
+letter_grade,F,1
+letter_grade,G,0
