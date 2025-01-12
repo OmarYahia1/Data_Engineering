@@ -1,0 +1,35 @@
+version: '3.9' 
+
+services:
+  main:
+    build: .
+    image: projectdew24:milestone2  # The name of the Python image
+    volumes:
+      - ./src:/m2_docker/src
+      - ./data:/m2_docker/data
+    depends_on:
+      - postgres_db           # Ensure PostgreSQL starts before this service
+    restart: on-failure       # Restart only if the container fails
+
+  postgres_db:
+    image: postgres:13        # PostgreSQL base image
+    environment:
+      POSTGRES_USER: rootuser       # PostgreSQL username
+      POSTGRES_PASSWORD: rootpassword # PostgreSQL password
+      POSTGRES_DB: my_database      # Default database name
+    ports:
+      - "5433:5432"           
+    volumes:
+      - ./postgres_data_mount:/var/lib/postgresql/data  
+      - ./m2_queries:/var/lib/m2_queries             
+
+  pgadmin:
+    image: dpage/pgadmin4     
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com  # email for pgAdmin
+      PGADMIN_DEFAULT_PASSWORD: mypassword    # password for pgAdmin
+    ports:
+      - "8080:80"             # Expose pgAdmin on localhost:8080
+
+  
+
